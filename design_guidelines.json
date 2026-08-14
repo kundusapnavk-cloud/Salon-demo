@@ -1,0 +1,156 @@
+{
+  "theme": "light",
+  "typography": {
+    "headings": "Cormorant Garamond",
+    "body": "Manrope",
+    "weights": {
+      "light": 300,
+      "regular": 400,
+      "semibold": 600,
+      "bold": 700
+    },
+    "guidelines": "Use Cormorant Garamond for all H1-H3 headings. Ensure headings use tight tracking (`tracking-tight` or `tracking-tighter`). Use Manrope for body text with loose line-height (`leading-relaxed`). Use uppercase with wide tracking (`tracking-widest`) for overlines, categories, and small labels."
+  },
+  "colors": {
+    "background": "#FAFAFA",
+    "surface": "#FFFFFF",
+    "text_primary": "#1A1A1A",
+    "text_secondary": "#525252",
+    "accent_primary": "#A65C47",
+    "accent_hover": "#8C4A32",
+    "neutral_warm": "#F3EFEA",
+    "border": "#E5E5E5"
+  },
+  "visual_enhancers": {
+    "borders": "1px solid rgba(0,0,0,0.05). Use delicate borders to define premium cards or section divisions.",
+    "shadows": "Very subtle, diffuse ambient shadows. Example: `shadow-[0_8px_30px_rgba(0,0,0,0.04)]`.",
+    "corners": "Subtle rounded corners. Use `rounded-md` or `rounded-lg` max (4px to 8px). Avoid excessive rounding.",
+    "textures": "Consider a subtle grain texture overlay on dark sections or the hero background to avoid flat color.",
+    "glassmorphism": "Used strictly for the sticky navigation and floating mobile bar. Must have a backdrop blur (`backdrop-blur-xl`), semi-transparent background (`bg-white/80`), and a delicate 1px border."
+  },
+  "layouts": {
+    "spacing": "Generous spacing is critical for an award-worthy feel. Use 2-3x typical spacing. Sections should have `py-20` to `py-32`. Elements inside should use `gap-8` to `gap-16`.",
+    "grid": "Embrace asymmetry. For the 'About' section, use a split-screen (e.g., 50/50 or 40/60). For 'Gallery' and 'Instagram', use dense or masonry layouts.",
+    "hero": "Full height (`min-h-[90vh]` or `100vh`). Masked kinetic text reveal. High impact, large typography.",
+    "general": "Avoid standard centered Bootstrap columns. Embrace whitespace. Rely on optical alignment."
+  },
+  "motion": {
+    "scrolling": "Lenis MUST be implemented for smooth momentum scrolling.",
+    "reveals": "Framer Motion for line-by-line text masks, staggered fade-in-up for cards and images on scroll.",
+    "hero": "On-load masked line-by-line reveal for 'Your Look. Your Style. Your Confidence.' + subtle slow scale (parallax) on the hero background image.",
+    "marquee": "One slow editorial marquee with a Serif font, widely spaced. Implement using `react-fast-marquee`.",
+    "micro_interactions": "Hover states on service cards (subtle scale-up `scale-[1.02]`), buttons (background color shift, slight transform)."
+  },
+  "components": {
+    "navigation": "Sticky top nav. Glassmorphism effect. Includes Logo, links, and 'Book Appointment' CTA. DO NOT use a completely transparent background.",
+    "hero": "Full-width background image with overlay (e.g., `bg-black/30`), kinetic typography, rating badge (4.8/5), primary CTAs.",
+    "about": "Split-screen layout. Large image on one side (clipped frame or organic shape), sophisticated typography on the other. Include numbered manifesto chapters.",
+    "services": "6 distinct categories (Hair, Hair Colour, Skin & Facials, Nails, Makeup, Grooming). Premium card design. Each displays name/description/duration/price/'Book Now'. Clicking 'Book Now' opens the Booking Modal.",
+    "booking_modal": "Use Shadcn Dialog. Pre-selects the clicked service. Frontend-only form. Show a success state after submission.",
+    "marquee": "Slow moving, elegant text ribbon. E.g., 'MORE THAN JUST A SALON • ELEVATE YOUR STYLE • REVEAL YOUR CONFIDENCE •'",
+    "gallery": "Masonry layout of salon/client images.",
+    "reviews": "Clean, elegant review cards. Highlight the 4.8/5 rating.",
+    "instagram": "Grid of square images (Follow Our Work).",
+    "contact": "Contact details paired with a map placeholder.",
+    "floating_whatsapp": "Floating WhatsApp button (`fixed bottom-6 right-6 z-50`) on desktop.",
+    "mobile_bar": "Fixed bottom bar on mobile view ONLY containing: Call | WhatsApp | Book."
+  },
+  "accessibility": {
+    "contrast": "Ensure a 4.5:1 text-to-background contrast ratio. Text placed over images MUST have a gradient overlay or text-shadow.",
+    "motion": "Respect `prefers-reduced-motion` CSS rules.",
+    "testing": "All interactive elements (buttons, links, form inputs, modals, menu items) MUST include a `data-testid` attribute (kebab-case, role-based)."
+  },
+  "image_urls": {
+    "hero_background": [
+      {
+        "url": "https://images.pexels.com/photos/3736288/pexels-photo-3736288.jpeg",
+        "description": "Premium modern hair salon interior with stylist",
+        "category": "Hero Background"
+      }
+    ],
+    "about": [
+      {
+        "url": "https://images.unsplash.com/photo-1635273051937-a0ddef9573b6",
+        "description": "Stylist cutting hair",
+        "category": "About Section Image"
+      }
+    ],
+    "services": [
+      {
+        "url": "https://images.unsplash.com/photo-1535579710123-3c0f261c474e",
+        "description": "Hair Model / Haircut",
+        "category": "Service: Hair"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
+        "description": "Blonde Hair Model / Colour",
+        "category": "Service: Hair Colour"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881",
+        "description": "Skincare facial aesthetic",
+        "category": "Service: Skin & Facials"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1632345031435-8727f6897d53",
+        "description": "Nails Manicure",
+        "category": "Service: Nails"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9",
+        "description": "Makeup / Face treatment",
+        "category": "Service: Makeup"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1",
+        "description": "Men grooming barber",
+        "category": "Service: Grooming"
+      }
+    ],
+    "gallery_and_instagram": [
+      {
+        "url": "https://images.unsplash.com/photo-1601288496920-b6154fe3626a",
+        "description": "Beautiful hair model portrait",
+        "category": "Gallery/Social"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1611451444023-7fe9d86fe1d0",
+        "description": "Elegant woman portrait",
+        "category": "Gallery/Social"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1581841064838-a470c740e8ee",
+        "description": "Elegant woman in black hat",
+        "category": "Gallery/Social"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1636153279424-cb5d1e00f5a2",
+        "description": "Woman with long black hair",
+        "category": "Gallery/Social"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Honor the client's art direction: Awwwards Site-of-the-Day level. Use bold editorial design, oversized serif headings, and generous whitespace.",
+    "Implement Framer Motion for section reveals, particularly the kinetic line-by-line text mask in the Hero section.",
+    "Set up Lenis for smooth momentum scrolling. This is mandatory for the premium feel.",
+    "Do NOT use pure transparent backgrounds for the sticky nav. Use a strong glassmorphism effect (blur + white/80).",
+    "Use 'lucide-react' for all icons (checkmarks, arrows, WhatsApp, phone, etc.).",
+    "Ensure 'Book Now' opens a modal (Shadcn Dialog) to book the selected service with a frontend-only success state.",
+    "Implement a mobile-only fixed bottom bar (Call | WhatsApp | Book). Hide this on md+ breakpoints.",
+    "Build the configuration object (centralized config for salon name/logo/tagline/services/brand colors) in a dedicated configuration file and import it where needed.",
+    "Do not use generic SaaS layouts. Rely on asymmetric, editorial, masonry, or bento grids.",
+    "Apply data-testid on every clickable or actionable element."
+  ],
+  "universal_guidelines_for_main_agent": [
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "Avoid universal transitions (e.g., `transition: all`). Add transitions for specific properties.",
+    "DO NOT center align the app container in CSS. Keep natural reading flow.",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "NEVER use placeholder text for images. Use the provided URLs.",
+    "Prioritize Shadcn UI components for complex interactions (Dialog, Forms, Select).",
+    "Ensure high contrast and accessibility."
+  ]
+}
