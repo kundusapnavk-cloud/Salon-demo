@@ -21,7 +21,7 @@ export default function BookingCTA() {
       <div className="relative z-10 mx-auto max-w-3xl px-5 text-center lg:px-8">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cream/50">
-            Appointments Open
+            Plan Your Visit
           </p>
         </Reveal>
         <Reveal delay={0.08}>
@@ -31,7 +31,7 @@ export default function BookingCTA() {
         </Reveal>
         <Reveal delay={0.16}>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-cream/60 md:text-lg">
-            Book your appointment and let our experts take care of the rest.
+            Tell the studio which hair, skin, nail or makeup service you are interested in and ask about a suitable appointment time.
           </p>
         </Reveal>
         <Reveal delay={0.24}>
@@ -41,7 +41,7 @@ export default function BookingCTA() {
               data-testid="cta-book-button"
               className="rounded-full bg-brand px-8 py-4 text-sm font-semibold text-cream transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-hover"
             >
-              Book Appointment
+              Book on WhatsApp
             </button>
             <a
               href={whatsappLink()}

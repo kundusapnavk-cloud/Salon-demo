@@ -46,7 +46,7 @@ export default function FloatingActions() {
           className="flex flex-col items-center gap-1 bg-brand py-3 text-[11px] font-semibold uppercase tracking-widest text-cream transition-colors hover:bg-brand-hover"
         >
           <CalendarCheck size={18} strokeWidth={1.8} />
-          Book
+          Book on WhatsApp
         </button>
       </nav>
     </>

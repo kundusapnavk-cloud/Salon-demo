@@ -83,7 +83,7 @@ export default function Navbar() {
             data-testid="nav-book-button"
             className="hidden rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-cream transition-colors duration-200 hover:bg-brand-hover sm:block"
           >
-            Book Appointment
+            Book on WhatsApp
           </button>
           <button
             onClick={() => setOpen((v) => !v)}
@@ -127,7 +127,7 @@ export default function Navbar() {
                 data-testid="mobile-nav-book-button"
                 className="mt-3 w-full rounded-full bg-brand py-3.5 text-sm font-semibold text-cream transition-colors hover:bg-brand-hover"
               >
-                Book Appointment
+                Book on WhatsApp
               </button>
             </div>
           </motion.nav>

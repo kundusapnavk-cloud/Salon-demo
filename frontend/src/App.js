@@ -11,12 +11,10 @@ import Services from "@/components/salon/Services";
 import WhyUs from "@/components/salon/WhyUs";
 import Gallery from "@/components/salon/Gallery";
 import Reviews from "@/components/salon/Reviews";
-import Instagram from "@/components/salon/Instagram";
 import BookingCTA from "@/components/salon/BookingCTA";
 import Contact from "@/components/salon/Contact";
 import Footer from "@/components/salon/Footer";
 import FloatingActions from "@/components/salon/FloatingActions";
-import BookingModal from "@/components/salon/BookingModal";
 
 export default function App() {
   useEffect(() => {
@@ -60,14 +58,12 @@ export default function App() {
           <WhyUs />
           <Gallery />
           <Reviews />
-          <Instagram />
           <BookingCTA />
           <Contact />
         </main>
         <Footer />
         <div className="h-16 md:hidden" aria-hidden="true" />
         <FloatingActions />
-        <BookingModal />
       </div>
     </BookingProvider>
   );

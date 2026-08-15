@@ -1,5 +1,4 @@
-// Demo stub — swap the body for a real POST to `${process.env.REACT_APP_BACKEND_URL}/api/bookings`
-// when a booking backend is connected.
+// Retained for compatibility with the unused legacy booking dialog.
 export async function submitBookingRequest(payload) {
   await new Promise((resolve) => setTimeout(resolve, 900));
   return { ok: true, payload };

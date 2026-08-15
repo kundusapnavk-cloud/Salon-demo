@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Phone, MessageCircle, MapPin, Clock } from "lucide-react";
+import { Phone, MessageCircle, MapPin } from "lucide-react";
 import { salon, whatsappLink } from "../../config/salon";
 import { scrollToId } from "../../lib/scroll";
 
@@ -30,28 +30,6 @@ export default function Footer() {
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/50">
             {salon.brand.description}
           </p>
-          <div className="mt-6 flex gap-3">
-            <a
-              href={salon.contact.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="footer-instagram-link"
-              aria-label="Instagram"
-              className="grid h-10 w-10 place-items-center rounded-full border border-cream/15 text-cream/70 transition-colors duration-200 hover:border-brand hover:bg-brand hover:text-cream"
-            >
-              <Instagram size={16} />
-            </a>
-            <a
-              href={salon.contact.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="footer-facebook-link"
-              aria-label="Facebook"
-              className="grid h-10 w-10 place-items-center rounded-full border border-cream/15 text-cream/70 transition-colors duration-200 hover:border-brand hover:bg-brand hover:text-cream"
-            >
-              <Facebook size={16} />
-            </a>
-          </div>
         </div>
 
         <nav aria-label="Footer">
@@ -108,22 +86,12 @@ export default function Footer() {
             <li className="flex items-center gap-3">
               <MessageCircle size={14} className="shrink-0 text-brand" />
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" data-testid="footer-whatsapp-link" className="transition-colors hover:text-brand">
-                WhatsApp Us
+                Book on WhatsApp
               </a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin size={14} className="mt-0.5 shrink-0 text-brand" />
-              <span>{salon.contact.address}</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <Clock size={14} className="mt-0.5 shrink-0 text-brand" />
-              <span>
-                {salon.hours.map((h) => (
-                  <span key={h.days} className="block">
-                    {h.days}: {h.time}
-                  </span>
-                ))}
-              </span>
+              <span><span className="block">{salon.contact.address}</span><a href={salon.contact.mapsUrl} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block font-semibold text-brand transition-colors hover:text-cream">Get Directions</a></span>
             </li>
           </ul>
         </div>

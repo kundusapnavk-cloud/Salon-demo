@@ -1,4 +1,3 @@
-import { Clock } from "lucide-react";
 import { salon, slugify } from "../../config/salon";
 import { useBooking } from "../../context/BookingContext";
 import { Reveal } from "./Reveal";
@@ -17,7 +16,7 @@ export default function Services() {
               A Menu of <em className="text-brand">Rituals</em>
             </>
           }
-          description="Every service is a considered ritual — priced transparently, timed honestly, and finished with care. Tap Book Now on any service to request your slot."
+          description="Explore the studio's main service categories. The selection below is representative; contact the studio to confirm options and current pricing."
         />
 
         <div className="mt-16 space-y-16">
@@ -53,18 +52,13 @@ export default function Services() {
                         </p>
                       </div>
                       <div className="flex items-center justify-between gap-6 sm:justify-end">
-                        <p className="flex items-center gap-1.5 whitespace-nowrap text-sm text-ink/60">
-                          <Clock size={13} strokeWidth={1.8} />
-                          {s.duration}
-                          <span className="mx-1 text-ink/25">·</span>
-                          <span className="font-semibold text-ink">{s.price}</span>
-                        </p>
+                        {s.price && <p className="whitespace-nowrap text-sm font-semibold text-ink">{s.price}</p>}
                         <button
                           onClick={() => openBooking(s.name)}
                           data-testid={`book-service-${slugify(s.name)}`}
                           className="rounded-full border border-ink/15 px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-ink transition-colors duration-200 hover:border-brand hover:bg-brand hover:text-cream"
                         >
-                          Book Now
+                          WhatsApp to Book
                         </button>
                       </div>
                     </div>
