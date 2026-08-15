@@ -128,7 +128,7 @@ export default function BookingModal() {
                   pattern="[0-9+ -]{8,15}"
                   value={form.phone}
                   onChange={set("phone")}
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 79821 55015"
                   className={inputCls}
                 />
               </div>

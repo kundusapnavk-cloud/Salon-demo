@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown, Star } from "lucide-react";
+import { ArrowDown, Phone } from "lucide-react";
 import { salon } from "../../config/salon";
 import { scrollToId } from "../../lib/scroll";
 import { useBooking } from "../../context/BookingContext";
@@ -85,37 +85,18 @@ export default function Hero() {
             data-testid="hero-book-button"
             className="rounded-full bg-brand px-8 py-4 text-sm font-semibold text-cream transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-hover"
           >
-            Book Appointment
+            Book on WhatsApp
           </button>
-          <button
-            onClick={() => scrollToId("services")}
+          <a
+            href={`tel:${salon.contact.phoneLink}`}
             data-testid="hero-explore-button"
             className="rounded-full border border-cream/30 px-8 py-4 text-sm font-semibold text-cream transition-colors duration-200 hover:border-cream/60 hover:bg-cream/10"
           >
-            Explore Services
-          </button>
+            <Phone size={16} className="mr-2 inline" />
+            Call Now
+          </a>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 1.15, ease }}
-          data-testid="hero-rating"
-          className="mt-10 flex items-center gap-3"
-        >
-          <span className="flex gap-1 text-[#D9A441]">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
-            ))}
-          </span>
-          <span className="text-sm font-semibold text-cream">
-            {salon.rating.value}/5
-          </span>
-          <span className="h-1 w-1 rounded-full bg-cream/60" />
-          <span className="text-sm text-cream/85">
-            {salon.rating.label} · {salon.rating.count}+ reviews
-          </span>
-        </motion.div>
       </motion.div>
 
       <motion.button

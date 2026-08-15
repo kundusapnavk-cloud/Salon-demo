@@ -1,4 +1,4 @@
-import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { MapPin, MessageCircle, Phone } from "lucide-react";
 import { salon, whatsappLink } from "../../config/salon";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
@@ -7,7 +7,7 @@ const rowCls =
   "flex items-start gap-5 border-b border-ink/8 py-6 transition-colors duration-200";
 
 export default function Contact() {
-  const { contact, hours } = salon;
+  const { contact } = salon;
   return (
     <section id="contact" data-testid="contact-section" className="py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
@@ -16,7 +16,7 @@ export default function Contact() {
           overline="Contact"
           title={
             <>
-              Find Your Way <em className="text-brand">to the Chair</em>
+              Find Us in <em className="text-brand">Sector 31</em>
             </>
           }
         />
@@ -61,7 +61,7 @@ export default function Contact() {
                     data-testid="contact-whatsapp-button"
                     className="rounded-full border border-brand px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-brand transition-colors hover:bg-brand hover:text-cream"
                   >
-                    Chat on WhatsApp
+                    Book on WhatsApp
                   </a>
                 </div>
               </div>
@@ -92,41 +92,6 @@ export default function Contact() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.14}>
-              <div className={rowCls}>
-                <span className="mt-1 grid h-11 w-11 shrink-0 place-items-center rounded-full border border-brand/30 text-brand">
-                  <Clock size={17} strokeWidth={1.7} />
-                </span>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/45">Opening Hours</p>
-                  {hours.map((h) => (
-                    <p key={h.days} className="mt-1.5 text-sm text-ink/70">
-                      <span className="font-medium text-ink">{h.days}</span>
-                      <span className="mx-2 text-ink/25">·</span>
-                      {h.time}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.18}>
-              <div className={`${rowCls} border-b-0`}>
-                <span className="mt-1 grid h-11 w-11 shrink-0 place-items-center rounded-full border border-brand/30 text-brand">
-                  <Mail size={17} strokeWidth={1.7} />
-                </span>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/45">Email</p>
-                  <a
-                    href={`mailto:${contact.email}`}
-                    data-testid="contact-email-link"
-                    className="mt-1 block font-serif text-xl text-ink transition-colors hover:text-brand"
-                  >
-                    {contact.email}
-                  </a>
-                </div>
-              </div>
-            </Reveal>
           </div>
 
           <Reveal delay={0.1}>
