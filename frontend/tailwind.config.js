@@ -13,12 +13,12 @@ module.exports = {
       },
       colors: {
         brand: {
-          DEFAULT: 'var(--brand-accent)',
-          hover: 'var(--brand-accent-hover)',
+          DEFAULT: 'rgb(var(--brand-accent-rgb) / <alpha-value>)',
+          hover: 'rgb(var(--brand-accent-hover-rgb) / <alpha-value>)',
         },
-        ink: 'var(--brand-ink)',
-        cream: 'var(--brand-cream)',
-        warm: 'var(--brand-warm)',
+        ink: 'rgb(var(--brand-ink-rgb) / <alpha-value>)',
+        cream: 'rgb(var(--brand-cream-rgb) / <alpha-value>)',
+        warm: 'rgb(var(--brand-warm-rgb) / <alpha-value>)',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

@@ -45,7 +45,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease }}
-          className="text-xs font-semibold uppercase tracking-[0.3em] text-cream/70"
+          className="text-xs font-semibold uppercase tracking-[0.3em] text-cream/90"
         >
           {salon.hero.overline}
         </motion.p>
@@ -57,7 +57,7 @@ export default function Hero() {
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.3 + i * 0.14, ease }}
-                className={`block ${line.accent ? "italic text-brand" : ""}`}
+                className={`block ${line.accent ? "italic text-[#D89A83]" : ""}`}
               >
                 {line.text}
               </motion.span>
@@ -69,7 +69,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.85, ease }}
-          className="mt-6 max-w-xl text-base leading-relaxed text-cream/75 md:text-lg"
+          className="mt-6 max-w-xl text-base leading-relaxed text-cream/90 md:text-lg"
         >
           {salon.hero.subheading}
         </motion.p>
@@ -111,8 +111,8 @@ export default function Hero() {
           <span className="text-sm font-semibold text-cream">
             {salon.rating.value}/5
           </span>
-          <span className="h-1 w-1 rounded-full bg-cream/40" />
-          <span className="text-sm text-cream/65">
+          <span className="h-1 w-1 rounded-full bg-cream/60" />
+          <span className="text-sm text-cream/85">
             {salon.rating.label} · {salon.rating.count}+ reviews
           </span>
         </motion.div>

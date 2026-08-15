@@ -8,6 +8,11 @@
     --brand-ink: #1C1917;
     --brand-cream: #FAF8F5;
     --brand-warm: #F3EFEA;
+    --brand-accent-rgb: 166 92 71;
+    --brand-accent-hover-rgb: 140 74 50;
+    --brand-ink-rgb: 28 25 23;
+    --brand-cream-rgb: 250 248 245;
+    --brand-warm-rgb: 243 239 234;
 }
 
 body {
@@ -15,6 +20,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
 }
 
 ::selection {

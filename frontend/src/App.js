@@ -21,9 +21,14 @@ import BookingModal from "@/components/salon/BookingModal";
 export default function App() {
   useEffect(() => {
     const root = document.documentElement;
-    Object.entries(salon.brand.colors).forEach(([key, value]) =>
-      root.style.setProperty(`--brand-${key}`, value)
-    );
+    const hexToRgb = (hex) => {
+      const v = hex.replace("#", "");
+      return [0, 2, 4].map((i) => parseInt(v.slice(i, i + 2), 16)).join(" ");
+    };
+    Object.entries(salon.brand.colors).forEach(([key, value]) => {
+      root.style.setProperty(`--brand-${key}`, value);
+      root.style.setProperty(`--brand-${key}-rgb`, hexToRgb(value));
+    });
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
